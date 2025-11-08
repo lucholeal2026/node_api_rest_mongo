@@ -1,0 +1,44 @@
+crear proyecto
+npm init
+instalamos nodemon
+npm i nodemon --save-dev
+
+configuramos nodemon en el package.json
+"dev": "nodemon src/app.js"
+
+ponemos el archivo que se ejecutara al comienzo
+"start": "node src/app.js"
+
+creamos las variables de entorno
+creamos el archivo .env
+configuramos el puerto, y los datos que necesita mongodb en el archivo.env
+
+creamos el archivo .gitignore e ignoramos
+.env
+node_modules/
+
+instalamos express y dotenv
+npm i express dotenv
+
+**************************************
+en app.js iniciamos express y dotenv
+const express = require("express");
+const { config } = require("dotenv");
+config();
+
+const app = express();
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Servidor iniciado en el puerto ${port}`);
+});
+
+**********************************
+Instalamos mongose para trabajar con mongodb
+npm i mongoose
+
+**********************************
+Docker para ejecutar mongodb
+docker compose up -d
+

@@ -1,0 +1,21 @@
+{
+  "name": "4.proyecto-node-crud",
+  "version": "0.0.1",
+  "description": "Haremos un crud con NodeJs y Mongodb",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "author": "Luis Leal",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3"
+  }
+}
